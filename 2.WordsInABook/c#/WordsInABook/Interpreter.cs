@@ -23,9 +23,8 @@ namespace WordsInABook
         }
         public virtual ICollection<string> MostFrequentWords(int count)
         {
-            var words = Book.Split(' ');
-
-            return words
+            return Book
+                .Split(' ')
                 .GroupBy(word => word)
                 .OrderByDescending(group => group.Count())
                 .Take(count)
