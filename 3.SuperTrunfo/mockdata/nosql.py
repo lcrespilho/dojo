@@ -16,23 +16,18 @@ sudo_user = User(name="sudo", password="haha1212").save()
 ariel_user = User(name="ariel", password="ariel").save()
 
 # Cards
-dezao_card = Card( name="Dezao", attributes={ "gitCommits":13,
-                "steamTime":836,
-                "coffeesPerDay":2,
-                "nBis":7 } ).save()
+dezao_card = Card( name="Dezao", attributes={ "Numero de commits no GitHub":13, # 1 - 300
+                "Tempo de jogo na Steam":836, # 1 - 1000
+                "Xicaras cafes por dia":2, # 0 - 6
+                "Bis por dia":7 # 0 - 20
+                } ).save()
 
-ariel_card = Card( name="Ariel", attributes={ "gitCommits":252,
-                "steamTime":2710,
-                "coffeesPerDay":2,
-                "nBis":6 } ).save()
+ariel_card = Card( name="Ariel",
 
-banheiro_card = Card( name="Banheiro", attributes={ "gitCommits":7,
-                "steamTime":2710,
-                "coffeesPerDay":2,
-                "nBis":6 } ).save()
+banheiro_card = Card( name="Banheiro",
 
 #Decks
-deck1 = Deck(name="deck1" attributes={ "gitCommits",
+deck1 = Deck(name="deck1" attributes={ "Numero de commits(GitHub)",
                 "steamTime",
                 "coffeesPerDay",
                 "nBis" } ).save()
