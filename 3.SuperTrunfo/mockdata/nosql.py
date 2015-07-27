@@ -12,7 +12,7 @@ for deck in Deck.nodes:
 
 
 # Users
-sudo_user = User(name="sudo", password="haha1212").save()
+sudo_user = User(name="su", password="haha1212").save()
 ariel_user = User(name="ariel", password="ariel").save()
 
 # Cards
