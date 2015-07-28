@@ -11,7 +11,7 @@ def init_nosql_patch( file ):
 
 def card_nosql_patch( file, translated ):
 	file.write(translated[0]+"_card = Card( ")
-	file.write("'name'='" + translated[0] +"', attributes ={\n")
+	file.write("name='" + translated[0] +"', attributes ={\n")
 
 	trans_size = len(translated)
 	first = True
@@ -23,26 +23,26 @@ def card_nosql_patch( file, translated ):
 			file.write('\t')
 		else:
 			file.write('\t,')
-		file.write("'"+cur_attr+"'="+value+"\n")
+		file.write("'"+cur_attr+"':'"+value+"'\n")
         file.write("\t} ).save()\n\n")
 
 def deck_nosql_patch( file, translated ):
 	deck_name = str(translated[0])+"_deck"
 	file.write( deck_name +"= Deck( ")
-	file.write("'name'='" + translated[0] +"', attributes ={\n")
+	file.write("\nname='" + translated[0] +"', attributes = [\n")
 
 	fields = translated[1].split(',')	
 	fields_size = len(fields)
 	first = True
-	for attr in range(1, fields_size, 2):
+	for attr in range(1, fields_size, 1):
 		cur_attr = str(fields[attr])
 		if first:
 			first = False
 			file.write('\t')
 		else:
 			file.write('\t,')
-		file.write("'"+cur_attr)
-        file.write("\t} ).save()\n\n")
+		file.write("'"+cur_attr+"'")
+        file.write("\t] ).save()\n\n")
 
 	trans_size = len(translated)
 	first = True
