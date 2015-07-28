@@ -22,7 +22,7 @@ class ParentListView(BaseView):
         all_parents = []
 
         for parent in ParentModel.nodes:
-            # Isso é o tipo de coisa que a gente faria um serializador :)
+            # Isso e o tipo de coisa que a gente faria um serializador :)
             all_parents.append({'name': parent.name, 'age':parent.age})
 
         return all_parents
