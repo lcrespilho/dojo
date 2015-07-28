@@ -3,7 +3,6 @@ from models import *
 for user in User.nodes:
     user.delete()
 
-
 for card in Card.nodes:
     card.delete()
 
@@ -12,32 +11,21 @@ for deck in Deck.nodes:
 
 
 # Users
-sudo_user = User(name="sudo", password="haha1212").save()
+sudo_user = User(name="su", password="haha1212").save()
 ariel_user = User(name="ariel", password="ariel").save()
 
 # Cards
-dezao_card = Card( name="Dezao", attributes={ "gitCommits":13,
-                "steamTime":836,
-                "coffeesPerDay":2,
-                "nBis":7 } ).save()
-
-ariel_card = Card( name="Ariel", attributes={ "gitCommits":252,
-                "steamTime":2710,
-                "coffeesPerDay":2,
-                "nBis":6 } ).save()
-
-banheiro_card = Card( name="Banheiro", attributes={ "gitCommits":7,
-                "steamTime":2710,
-                "coffeesPerDay":2,
-                "nBis":6 } ).save()
+dezao_card = Card( name="Dezao", attributes={ "Numero de commits no GitHub":13, # 1 - 300
+                "Tempo de jogo na Steam":836, # 1 - 1000
+                "Xicaras cafes por dia":2, # 0 - 6
+                "Bis por dia":7 # 0 - 20
+                } ).save()
 
 #Decks
-deck1 = Deck(name="deck1" attributes={ "gitCommits",
+deck1 = Deck(name="deck1", attributes={ "Numero de commits(GitHub)",
                 "steamTime",
                 "coffeesPerDay",
                 "nBis" } ).save()
-
-).save()
 
 deck1.cards.connect(dezao)
 
