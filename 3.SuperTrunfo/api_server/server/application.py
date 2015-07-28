@@ -1,4 +1,5 @@
 from server import app, router
+from . import authentication
 
 def run():
     router.define_routes()
