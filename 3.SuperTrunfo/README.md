@@ -17,10 +17,13 @@ virtualenv env -p python2.7
 source env/bin/activate
 
 #### Instalar neomodel
-pip install neomodel
+pip install -r requirements.txt 
 
 #### Exporta database - Mudar USER e PASSWORD
 export NEO4J_REST_URL=http://USER:PASSWORD@localhost:7474/db/data/
 
 #### Para executar um arquivo
 python nome_do_arquivo.py
+
+## Python: neomodel
+
