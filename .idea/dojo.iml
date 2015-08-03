@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/3.SuperTrunfo/servers" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 2.7.6 virtualenv at ~/dojo/3.SuperTrunfo/env" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
