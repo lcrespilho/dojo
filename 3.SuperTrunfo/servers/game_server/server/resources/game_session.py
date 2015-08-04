@@ -2,6 +2,7 @@ from time import time
 import random
 from error_codes import error_codes
 import sys
+from thread import start_new_thread
 
 from player import Player
 from base_socket import BaseSocket
@@ -19,13 +20,13 @@ class GameSession(BaseSocket):
     player_1 = Player()
     player_2 = Player()
 
-    def __init__(self, conn=None, addr=None):
-        self.connection = conn
+    def __init__(self, addr=None):
         self.address = addr
         self.generate_id()
         self.begin = time()
         self.last_interaction = time()
         self.game_state = game_logic.GameLogic()
+        start_new_thread(self.session_loop, ())
 
     def generate_id(self):
         beginning_of_day_in_millis = int(time() / 86400) * 86400000
@@ -48,7 +49,8 @@ class GameSession(BaseSocket):
         else:
             data = error_codes[error]
 
-        self._send_dict(data, self.connection)
+        self._send_dict(data, self.player_1.connection)
+        self._send_dict(data, self.player_2.connection)
         self.active = False
 
     def check_timeout(self):
@@ -63,8 +65,25 @@ class GameSession(BaseSocket):
         can_join_on_2 = (self.player_2.id is None and self.player_1.id != player_id)
         return can_join_on_1 or can_join_on_2
 
+    def communicate_game_logic(self, player_1_data, player_2_data):
+        response = dict()
+
+        if player_1_data:
+            response[self.player_1.id] = self.game_state.process_input(player_1_data, 1)
+        elif player_1_data is False:
+            self.inactivate_sessions('invalid_message')
+
+        if player_2_data:
+            response[self.player_2.id] = self.game_state.process_input(player_2_data, 2)
+        elif player_2_data is False:
+            self.inactivate_sessions('invalid_message')
+        if response:
+            self._send_dict(self.player_1.connection, response)
+            self._send_dict(self.player_2.connection, response)
+
     def add_player(self, player_id, connection):
         new_player = Player(connection=connection, id=player_id)
+
         if self.player_1.id is None:
             self.player_1 = new_player
         else:
@@ -81,17 +100,6 @@ class GameSession(BaseSocket):
         while self.active:
             player_1_data = self._receive_dict_async(self.player_1.connection)
             player_2_data = self._receive_dict_async(self.player_2.connection)
-
-            if player_1_data:
-                self.game_state.process_input(player_1_data, 1)
-            elif player_1_data is False:
-                self.inactivate_sessions('invalid_message')
-
-            if player_2_data:
-                self.game_state.process_input(player_2_data, 2)
-            elif player_2_data is False:
-                self.inactivate_sessions('invalid_message')
-
+            self.communicate_game_logic(player_1_data, player_2_data)
         self.game_state.end_match()
         sys.exit(0)
-
