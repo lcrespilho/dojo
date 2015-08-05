@@ -3,5 +3,3 @@ flask
 flask-restful
 Flask-SQLAlchemy
 Flask-HTTPAuth
-
-
