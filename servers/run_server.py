@@ -1,5 +1,5 @@
 from api_server import application
-from game_server.server.resources.game_server import GameServer
+from game_server.game_server import GameServer
 import signal
 import sys
 

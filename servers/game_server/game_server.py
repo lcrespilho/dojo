@@ -61,6 +61,8 @@ class GameServer(BaseSocket):
             connection, address = self.sessions_socket.accept()
             connection.setblocking(False)
 
+            self._send_dict(connection, {"connected": True})
+
             session = self._accept_session(connection, address)
 
             if session is not None:
@@ -88,7 +90,7 @@ class GameServer(BaseSocket):
 
             if data and 'action' in data:
                 if data['action'] == 'create_session':
-                    new_session = GameSession()
+                    new_session = GameSession(deck_cards=data['deck_cards'], attributes=data['attributes'])
                     start_new_thread(new_session.session_loop, ())
                     self.game_sessions.append(new_session)
                     self._send_dict(connection, {'session_id': new_session.id})

@@ -13,16 +13,14 @@ class GameSession(BaseSocket):
     interaction_timeout = 6000
     session_timeout = 30000
 
-    def __init__(self, addr=None):
+    def __init__(self, deck_cards, attributes):
         self.id = None
-        self.address = addr
         self.generate_id()
         self.begin = time()
         self.last_interaction = time()
-        self.game_state = game_logic.GameLogic()
         self.active = True
         self.players = [Player(), Player()]
-
+        self.game_state = game_logic.GameLogic(deck_cards=deck_cards, attributes=attributes)
 
     def generate_id(self):
         beginning_of_day_in_millis = int(time() / 86400) * 86400000
@@ -67,7 +65,7 @@ class GameSession(BaseSocket):
 
     def add_player(self, player_id, connection):
         new_player = Player(connection=connection, id=player_id)
-        message = [None]*len(self.players)
+        message = [None] * len(self.players)
 
         for idx, player in enumerate(self.players):
             if player.id is None:
@@ -90,7 +88,6 @@ class GameSession(BaseSocket):
             if response_for_player:
                 self._send_dict(self.players[response_idx].connection, response_for_player)
 
-
     def close(self):
         for player in self.players:
             if player.connection:
@@ -99,7 +96,7 @@ class GameSession(BaseSocket):
     def session_loop(self):
 
         while self.active:
-            player_data = [None]*len(self.players)
+            player_data = [None] * len(self.players)
 
             for player_idx, player in enumerate(self.players):
                 player_data[player_idx] = self._receive_dict_async(player.connection)

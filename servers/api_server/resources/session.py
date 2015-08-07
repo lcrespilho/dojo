@@ -1,7 +1,8 @@
+import neomodel as nm
 from flask_restful import Resource, abort
 from api_server.common.views import BaseListView
+from .deck import Deck
 import socket
-# import sys
 import json
 
 
@@ -35,9 +36,41 @@ class BaseSession(object):
 
 
 class SessionListView(BaseSession, BaseListView):
+    input_fields = {
+        'deck_id' : {"type": str, "required": True}
+    }
+
+    fields = {
+        'name': {'type': str, 'required': True},
+        'attributes': {'type': dict, }
+    }
+
     def get(self):
         return self._send_message({'action': 'get_sessions'})
 
     def post(self):
-        return self._send_message({'action': 'create_session'})
+        args = self._parse_arguments()
+
+        try:
+            attributes = Deck.nodes.get(name=args['deck_id']).attributes
+            cards = [self.serialize(node) for node in Deck.nodes.get(name=args['deck_id']).cards]
+        except nm.DoesNotExist:
+            abort(404)
+
+        for idx, card in enumerate(cards):
+            new_atributes = {}
+
+            for attr_name in card['attributes']:
+                if attr_name in attributes:
+                    new_atributes[attr_name] = card['attributes'][attr_name]
+            cards[idx]['attributes'] = new_atributes
+
+        message = {
+            'action': 'create_session',
+            'deck_cards': cards,
+            'attributes': attributes,
+        }
+        # return message
+
+        return self._send_message(message)
 

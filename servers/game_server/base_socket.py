@@ -7,6 +7,7 @@ import json
 class BaseSocket(object):
     address = None
     last_inter = None
+    _buffer_size = 1000
 
     def _send_dict(self, connection, data):
         try:
@@ -20,10 +21,17 @@ class BaseSocket(object):
             return None
 
         try:
-            data = connection.recv(1024)
-            self.last_interaction = time()
+            data = ''
+            data_chunk = ''
+
+            while len(data_chunk) >= self._buffer_size or len(data) < 1:
+                data_chunk = connection.recv(self._buffer_size)
+                data += data_chunk
+                self.last_interaction = time()
+
         except socket.error:
-            return None
+            if len(data) == 0:
+                return None
 
         try:
             json_data = json.loads(data)
