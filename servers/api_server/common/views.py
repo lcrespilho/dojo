@@ -33,6 +33,7 @@ class BaseView(Resource):
     def serialize(self, node):
         return {field: getattr(node, field) for field in self.fields}
 
+
 class BaseListView(BaseView):
     @requires_auth
     def get(self):

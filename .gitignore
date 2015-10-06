@@ -2,3 +2,6 @@
 3.SuperTrunfo/.idea/*
 3.SuperTrunfo/env
 .env
+env
+3.SuperTrunfo/interface/angular*
+3.SuperTrunfo/interface/bootstrap*

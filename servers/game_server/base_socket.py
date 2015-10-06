@@ -3,30 +3,36 @@ from server_log import logging
 import socket
 import sys
 import json
+import ast
+
 
 class BaseSocket(object):
     address = None
     last_inter = None
-    _buffer_size = 1000
+    _buffer_size = 10000
 
     def _send_dict(self, connection, data):
         try:
             json_data = json.dumps(data)
+            json_data = ast.literal_eval(json_data)
+            print '!!!!!!!!!!!!!:', json_data
             connection.send(json_data)
         except:
             pass
 
     def _receive_dict_async(self, connection):
+        data = ''
         if not connection:
             return None
 
         try:
-            data = ''
             data_chunk = ''
 
             while len(data_chunk) >= self._buffer_size or len(data) < 1:
                 data_chunk = connection.recv(self._buffer_size)
+                print data_chunk
                 data += data_chunk
+                data_chunk = ''
                 self.last_interaction = time()
 
         except socket.error:
@@ -34,9 +40,11 @@ class BaseSocket(object):
                 return None
 
         try:
+            data = data.split('\n')[-1]
             json_data = json.loads(data)
+            json_data = ast.literal_eval(json_data)
         except ValueError:
-            return False
+            return None
 
         return json_data
 

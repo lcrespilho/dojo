@@ -94,7 +94,6 @@ class GameSession(BaseSocket):
                 player.connection.close()
 
     def session_loop(self):
-
         while self.active:
             player_data = [None] * len(self.players)
 

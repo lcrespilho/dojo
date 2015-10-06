@@ -1,0 +1,27 @@
+<h4><strong>Novo jogo</strong></h4>
+<div ng-controller="DecksController as decksCtrl">
+  <form name="createSessionForm" ng-controller="gameController as gameCtrl" ng-submit="gameCtrl.createSession(decksCtrl.session.deck)">
+
+    <blockquote >
+      <strong></strong>
+      {{decksCtrl.session.deck.name}}
+    </blockquote>
+
+    <div class="row">
+      <div class="col-md-3">
+        <span center="text-center">Escolha o deck:</span>
+      </div>
+      <div class="col-md-9">
+        <fieldset class="form-group">
+          <select ng-model="decksCtrl.session.deck" class="form-control" ng-options="deck.name for deck in decksCtrl.decks" title="Decks">
+            <option value>Decks</option>
+          </select>
+        </fieldset>
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <input type="submit" class="btn btn-primary btn-lg" value="Criar" />
+    </fieldset>
+
+  </form>
+</div>

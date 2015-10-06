@@ -1,0 +1,41 @@
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+    <li role="presentation" ng-class="{ active:tab.isSet(1) }">
+      <a href ng-click="tab.setTab(1)">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Novo jogo
+      </a>
+    </li>
+    <li role="presentation" ng-class="{ active:tab.isSet(2) }">
+      <a href ng-click="tab.setTab(2)">
+        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        Salas existentes
+      </a>
+    </li>
+    <li role="presentation" ng-class="{ active:tab.isSet(3) }">
+      <a href ng-click="tab.setTab(3)">
+        <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+        Jogo aleatório
+      </a>
+    </li>
+    <li role="presentation" ng-class="{ active:tab.isSet(4) }">
+      <a href ng-click="tab.setTab(4)">
+        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+        Regras
+      </a>
+    </li>
+  </ul>
+
+  <div class="well">
+    <div ng-show="tab.isSet(1)">
+     <new-game></new-game>
+    </div>
+    <div ng-show="tab.isSet(2)">
+     <rooms></rooms>
+    </div>
+    <div ng-show="tab.isSet(3)">
+     <random-game></random-game>
+    </div>
+    <div ng-show="tab.isSet(4)">
+     <rules></rules>
+    </div>
+  </div>

@@ -1,6 +1,6 @@
 import neomodel as nm
 from flask_restful import Resource, abort
-from api_server.common.views import BaseListView
+from servers.api_server.common.views import BaseListView
 from .deck import Deck
 import socket
 import json
@@ -37,7 +37,7 @@ class BaseSession(object):
 
 class SessionListView(BaseSession, BaseListView):
     input_fields = {
-        'deck_id' : {"type": str, "required": True}
+        'deck_id': {"type": str, "required": True}
     }
 
     fields = {
@@ -50,8 +50,8 @@ class SessionListView(BaseSession, BaseListView):
 
     def post(self):
         args = self._parse_arguments()
-
         try:
+
             attributes = Deck.nodes.get(name=args['deck_id']).attributes
             cards = [self.serialize(node) for node in Deck.nodes.get(name=args['deck_id']).cards]
         except nm.DoesNotExist:

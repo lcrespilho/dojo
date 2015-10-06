@@ -1,5 +1,5 @@
-from api_server import application
-from game_server.game_server import GameServer
+from servers.api_server import application
+from servers.game_server.game_server import GameServer
 import signal
 import sys
 
@@ -11,7 +11,6 @@ if __name__ == '__main__':
     elif sys.argv[1] == 'game':
         server = GameServer()
 
-
         def signal_handler(signal, frame):
             server.stop()
             sys.exit(0)
@@ -19,7 +18,6 @@ if __name__ == '__main__':
 
         signal.signal(signal.SIGINT, signal_handler)
         server.start()
-
 
     elif sys.argv[1] == 'api':
         application.run()

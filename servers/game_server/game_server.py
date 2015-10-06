@@ -35,9 +35,8 @@ class GameServer(BaseSocket):
         begin = time()
         logging.info('Session join attempted')
 
-        while time() - begin < 200:
+        while time() - begin < 2:
             data = self._receive_dict_async(connection)
-
             if data and 'session_id' in data and 'player_id' in data:
                 for idx, session in enumerate(self.game_sessions):
                     if session.id == data['session_id'] and session.can_player_join(data['player_id']):
@@ -85,9 +84,9 @@ class GameServer(BaseSocket):
     def _listen_api(self, connection):
         begin = time()
 
-        while time() - begin < 200:
+        # while time() - begin < 200:
+        while time() - begin < 2:
             data = self._receive_dict_async(connection)
-
             if data and 'action' in data:
                 if data['action'] == 'create_session':
                     new_session = GameSession(deck_cards=data['deck_cards'], attributes=data['attributes'])
@@ -99,6 +98,7 @@ class GameServer(BaseSocket):
                 elif data['action'] == 'destroy_session' and 'session_id' in data:
                     for idx, session in enumerate(self.game_sessions):
                         if session.id == data['session_id']:
+
                             self.game_sessions[idx].active = False
                             self._send_dict(connection, {'deleted': True})
                             break
