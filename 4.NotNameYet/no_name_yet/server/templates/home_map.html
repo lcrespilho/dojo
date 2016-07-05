@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dojo - Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script type=text/javascript src="{{url_for('static', filename='map.js') }}"></script>
+  </head>
+
+  <body bgcolor="#336600">
+
+  <div><h1 align="center">FCKING DOJO!</h1></div>
+  <div style="height:600px; width:600px;" id="map">
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAybSUJMzCHNH3ZJ2j5Vm5_nS_kUVI2gjw&signed_in=true&callback=initMap" async defer>
+          </script>
+  </div>
+  <br>
+  <center><button>Um botão vai aqui!</button></center>
+  </body>
+</html>

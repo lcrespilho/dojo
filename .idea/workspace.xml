@@ -2,19 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40443a13-4069-4864-bbf1-c81c30352070" name="Default" comment="Add most of the routes and incomplete auth">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/api_server/__init__.py" afterPath="$PROJECT_DIR$/servers/api_server/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/game_server/__init__.py" afterPath="$PROJECT_DIR$/servers/game_server/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/api_server/application.py" afterPath="$PROJECT_DIR$/servers/api_server/application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/game_server/base_socket.py" afterPath="$PROJECT_DIR$/servers/game_server/base_socket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/game_server/game_server.py" afterPath="$PROJECT_DIR$/servers/game_server/game_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/game_server/game_session.py" afterPath="$PROJECT_DIR$/servers/game_server/game_session.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/mock.cards" afterPath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/mock.cards" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo4j-NoSQL/models.py" afterPath="$PROJECT_DIR$/neo4j-NoSQL/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/api_server/router.py" afterPath="$PROJECT_DIR$/servers/api_server/router.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/run_server.py" afterPath="$PROJECT_DIR$/servers/run_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/api_server/resources/session.py" afterPath="$PROJECT_DIR$/servers/api_server/resources/session.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servers/api_server/common/views.py" afterPath="$PROJECT_DIR$/servers/api_server/common/views.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/library/client.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/base.cards" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/generate_random.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/mock.cards" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/mocked.cards.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mockdata/nosql.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/mocked.cards.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/neo4j-NoSQL/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/application.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/authentication.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/common/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/common/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/common/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/card.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/deck.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/deck_cards.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/parent.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/session.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/resources/user.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/api_server/router.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/base_socket.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/error_codes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/game_logic.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/game_server.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/game_session.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/player.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/game_server/server_log.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servers/run_server.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dojo.iws" />
@@ -36,76 +60,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game_server.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6">
-              <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+            <state relative-caret-position="450">
+              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#328#369#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/game_server/game_session.py">
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="270">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_map.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/templates/home_map.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_log.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/game_server/server_log.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/run_server.py">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_socket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/game_server/base_socket.py">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/static/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="144">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/routes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/api_server/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/game_server/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,6 +174,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -125,18 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/resources/game_server.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/resources/base_socket.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/game_logic/game_logic.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/__init__.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/resources/__init__.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/game_logic/__init__.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/client-server/server/resources/game_session.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/requirements.txt" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/requirements.txt" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/api_server/resources/card.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/__init__.py" />
-        <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/api_server/resources/deck.py" />
         <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/game_server/__init__.py" />
         <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/game_server/server/start_server.py" />
         <option value="$PROJECT_DIR$/3.SuperTrunfo/servers/game_server/server/resources/server_log.py" />
@@ -176,17 +223,25 @@
         <option value="$PROJECT_DIR$/servers/game_server/__init__.py" />
         <option value="$PROJECT_DIR$/servers/game_server/game_server.py" />
         <option value="$PROJECT_DIR$/servers/game_server/base_socket.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/db/base_connector.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/requirements.txt" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/models.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/db/couch_connector.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/template/home.html" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/routes.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/run.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/application.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/views.py" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/static/map.js" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/templates/home_map.html" />
+        <option value="$PROJECT_DIR$/4.NotNameYet/README.md" />
       </list>
     </option>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
-    <option name="y" value="31" />
-    <option name="width" value="1922" />
-    <option name="height" value="1051" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -209,6 +264,8 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -239,7 +296,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
+              <option name="myItemId" value="4.NotNameYet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,29 +310,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
+              <option name="myItemId" value="4.NotNameYet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_server" />
+              <option name="myItemId" value="no_name_yet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,15 +328,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servers" />
+              <option name="myItemId" value="4.NotNameYet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api_server" />
+              <option name="myItemId" value="no_name_yet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,24 +350,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3.SuperTrunfo" />
+              <option name="myItemId" value="4.NotNameYet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="no_name_yet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4.NotNameYet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="no_name_yet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Feed_Manager_Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="mode&#9;FILE&#9;file:///home/dev/dojo/3.SuperTrunfo/neo4j-NoSQL/models.py&#10;models&#9;FILE&#9;file:///home/dev/dojo/3.SuperTrunfo/neo4j-NoSQL/models.py&#10;model&#9;FILE&#9;file:///home/dev/dojo/3.SuperTrunfo/neo4j-NoSQL/models.py&#10;common&#9;null&#9;null" />
-    <property name="FullScreen" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="260" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="277" />
@@ -345,6 +421,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1071" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -408,6 +485,18 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dojo" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -564,7 +653,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -573,11 +664,13 @@
       <changelist id="40443a13-4069-4864-bbf1-c81c30352070" name="Default" comment="" />
       <created>1438101598632</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1438101598632</updated>
     </task>
     <task id="LOCAL-00001" summary="Add most of the routes and incomplete auth">
       <created>1438117397631</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1438117397631</updated>
     </task>
@@ -585,28 +678,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="31" width="1922" height="1051" extended-state="6" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18483412" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39828694" sideWeight="0.49117646" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34475374" sideWeight="0.4852941" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5147059" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32655245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.5147059" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32655138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34475374" sideWeight="0.4852941" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.49117646" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -654,388 +747,168 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/servers/api_server/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="30" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/library/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="30" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/library/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.81875">
-          <caret line="47" column="26" selection-start-line="34" selection-start-column="0" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33215547">
-          <caret line="426" column="0" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1820" column="1" selection-start-line="1820" selection-start-column="1" selection-end-line="1820" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mocked.cards.py">
+    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mocked.cards.py" />
+    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mockdata/mock.cards" />
+    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mockdata/base.cards" />
+    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/models.py" />
+    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/example.py" />
+    <entry file="file://$PROJECT_DIR$/client/library/client.js" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/lib/python2.7/site-packages/flask_restful/reqparse.py" />
+    <entry file="file://$PROJECT_DIR$/servers/__init__.py" />
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/913858211/thread.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/common/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/common/views.py" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/app.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/deck_cards.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/deck.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/card.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/parent.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/user.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/error_codes.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/session.py" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/exthook.py" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/ext/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask_restful/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/tarfile.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/player.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/router.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/application.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/game_logic.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/authentication.py" />
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/913858211/__builtin__.py" />
+    <entry file="file://$PROJECT_DIR$/servers/api_server/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/servers/run_server.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/base_socket.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/game_session.py" />
+    <entry file="file://$PROJECT_DIR$/servers/game_server/server_log.py" />
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/db/base_connector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.75">
-          <caret line="141" column="45" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="45" />
+        <state relative-caret-position="432">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mockdata/mock.cards">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/env/lib/python2.7/site-packages/couchdb/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43564355">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/mockdata/base.cards">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/db/couch_connector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35643566">
+        <state relative-caret-position="56">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j-NoSQL/example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/library/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.089108914">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/lib/python2.7/site-packages/flask_restful/reqparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="30" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/913858211/thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/common/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/common/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3567839">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.984924">
-          <caret line="721" column="8" selection-start-line="721" selection-start-column="8" selection-end-line="721" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/deck_cards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/deck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/card.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/parent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/error_codes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/resources/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/exthook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="101" column="12" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask/ext/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6544">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/local/lib/python2.7/site-packages/flask_restful/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9376">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.SuperTrunfo/env/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/tarfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4192">
-          <caret line="2046" column="37" selection-start-line="2046" selection-start-column="0" selection-end-line="2047" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21176471">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
-            <element signature="e#0#27#0" expanded="false" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/913858211/__builtin__.py">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="432">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="e#328#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servers/api_server/__init__.py">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/__init__.py">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="198">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/static/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/no_name_yet/server/templates/home_map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/server_log.py">
+    <entry file="file://$PROJECT_DIR$/4.NotNameYet/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/run_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/base_socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/game_server/game_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6">
-          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
