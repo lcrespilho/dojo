@@ -4,8 +4,8 @@ import sys
 import json
 import imp
 
-from couchdb.mapping import Document, ViewField, TextField, FloatField
-from couchdb.mapping import BooleanField, ListField, DateField
+from couchdb.mapping import Document, ViewField, TextField, FloatField, DictField
+from couchdb.mapping import BooleanField, ListField, DateField, Mapping
 
 
 class BasicCouchOperations(Document):
@@ -33,43 +33,56 @@ class BasicCouchOperations(Document):
                 attr.sync(db)
 
 
-class UserAccess(BasicCouchOperations):
-    __predicate__ = 'user_access'
-    _id = TextField()  # email here
+class Organization(BasicCouchOperations):
+    __predicate__ = "organization"
+    _id = TextField()
+    name = TextField()
+    local = ListField(DictField(Mapping.build(
+        lat=FloatField(),
+        lon=FloatField(),
+        address_str=TextField(),
+        city=TextField()
+    )))
+    donation_types = ListField(TextField())
+    schedule = TextField()
+    doc_type = TextField(default="organization")
 
-    type = TextField(default='user_access')
-    account_id = TextField()
-    account_name = TextField()
-    email = TextField()
 
     all = ViewField(__predicate__, '''function(doc){
-                    if(doc.type == 'user_access'){
-                        emit(doc._id, doc);
-                    }
-            }''')
+        if(doc.doc_type == "organization"){
+            emit(doc._id, doc);
+        }
+    }''')
 
-    _by_email = ViewField(__predicate__, '''function(doc){
-                    if(doc.type == 'user_access' && doc.email){
-                        emit(doc.email, doc);
-                    }
-            }''',
-                         '''function(keys, values){
-                            grouped = []
-                            var item = {};
-                            values.forEach(function(value){
-                                grouped.push({account: value.account_id, name: value.account_name, id: value._id});
-                            });
-                            return grouped;
-                         }
-                         ''')
+    city = ViewField(__predicate__,
+        '''function(doc){
+            if (doc.doc_type == "organization"){
+                doc.local.forEach(function(local){
+                    emit (local.city, doc);
+                });
+            }
+         }''')
 
     @classmethod
-    def get_by_email(cls, db, email=None):
-        if email:
-            executed_view = cls._by_email(db, reduce=True, group_level=1, key=email, wrapper=None)
-        else:
-            executed_view = cls._by_email(db, reduce=True, group_level=1, wrapper=None)
-        return [(row.key, row.value) for row in executed_view.rows]
+    def sync(cls, db):
+        cls.all.sync(db)
+        cls.city.sync(db)
+
+
+class Donator(BasicCouchOperations):
+    _id = TextField()
+    name = TextField()
+    doc_type = TextField(default="donator")
+
+    all = ViewField("donator", '''function(doc){
+        if(doc.doc_type == "donator"){
+            emit(doc._id, doc);
+        }
+    }''')
+
+    @classmethod
+    def sync(cls, db):
+        cls.all.sync(db)
 
 
 def sync_db_objects(db):
@@ -79,3 +92,4 @@ def sync_db_objects(db):
                 obj.sync(db)
             except AttributeError:
                 pass
+
