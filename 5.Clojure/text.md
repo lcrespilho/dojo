@@ -20,6 +20,12 @@
 
 ---
 
+# Clojure for the Brave and True
+
+http://www.braveclojure.com/do-things/
+
+---
+
 # Programação Funcional:
 
 * Não possui conceito de variáveis de estado, todo valor é único e imutável.
