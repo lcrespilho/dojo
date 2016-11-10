@@ -396,7 +396,40 @@ Dar nome a posições dentro de uma coleção
 
 - Function Body
 
+Retorna o último valor do body.
+```
+(defn illustrative-function
+  []
+  (+ 1 304)
+  30
+  "batata")
+```
 
+- Anonymous Functions
+```
+;(fn [param-list] function body)
+;or
+;#(<operation> %) ; single argument
+; example:
+(println (#(+ % 3 4) 3))
+;#(<operation> %1 %2 ... %n) ; n arguments
+; example:
+(println (#(+ %1 %2 %3) 1 2 3))
+
+
+(def my-special-multiplier (fn [x] (* x 3)))
+(my-special-multiplier 12)
+
+```
+
+Obs:
+```
+;; Function call
+(* 8 3)
+
+;; Anonymous function
+#(* % 3)
+```
 
 
 
