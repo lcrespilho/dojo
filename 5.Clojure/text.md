@@ -432,6 +432,87 @@ Obs:
 ```
 
 
+-
+
+---
+
+# Full example
+
+Entrada:
+```
+(def asym-hobbit-body-parts [{:name "head" :size 3}
+                             {:name "left-eye" :size 1}
+                             {:name "left-ear" :size 1}
+                             ])
+
+```
+
+- Criar um 'right' para todos os elemntos da lista de mapas que sejam left.
+
+Possível solução:
+```
+(defn matching-part
+  [part]
+  {:name (clojure.string/replace (:name part) #"^left-" "right-")
+   :size (:size part)})
+
+(defn symmetrize-body-parts
+  "Expects a seq of maps that have a :name and :size"
+  [asym-body-parts]
+  (loop [remaining-asym-parts asym-body-parts final-body-parts []]
+    (println (str "1: " remaining-asym-parts " 2: "final-body-parts))
+    (if (empty? remaining-asym-parts)
+      final-body-parts
+      (let [[part & remaining] remaining-asym-parts]
+        (recur remaining (into final-body-parts (set [part (matching-part part)])))
+      )
+    )
+  )
+)
+```
+
+> Entendendo
+
+- 'let'
+Atribui valor dentro de um escopo
+```
+; (let [arg1 arg2] [<body>] [<return>])
+(def x 0)
+(let [x (inc x)] (println x) (println "End") (inc x))
+```
+
+
+- 'loop' + 'recur'
+'loop': tem a ideia de 'marcar' onde começa um possível laço de repetição. (Funciona como label)
+```
+; (loop [arg1 default1 *... argnn defaultn*])
+(loop [arg 1] (println arg))
+```
+
+'recu': vem de recursive! Volta para o começo do laço usando os novos valores
+
+Dois códigos com a mesma funcionalidade:
+```
+(defn recursive-printer
+  ([]
+     (recursive-printer 0))
+  ([iteration]
+     (println (str "Iteration " iteration))
+     (if (> iteration 3)
+       (println "Goodbye!")
+       (recursive-printer (inc iteration)))))
+
+(recursive-printer)
+
+
+(loop [iteration 0]
+  (println (str "Iteration " iteration))
+  (if (> iteration 3)
+    (println "Goodbye!")
+    (recur (inc iteration))
+  )
+)
+```
 
 ---
 REPL
